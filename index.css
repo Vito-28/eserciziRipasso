@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.main-container h2 {
+    color: #0a1317;
+    font-family: system-ui, -apple-system, "system-ui", ".SFNSText-Regular", sans-serif;
+    font-style: normal;
+    font-weight: 600px;
+    line-height: 28px;
+    font-size: 24px;
+}
+
+div.input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+div.input input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    width: 450px;
+    height: 40px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+div.input input:hover {
+    border: 1px solid black;
+}
+
+div.input input:focus {
+    border: 1px solid black;
+}
+
+div.input label {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    /* Allineata con il testo inizialmente */
+    font-size: 16px;
+    color: #5a6472;
+    background: white;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+div.input input:focus + label,
+div.input input:not(:placeholder-shown) + label {
+    top: 4px;
+    left: 5px;
+    font-size: 14px;
+}
+
+div.button button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    width: 470px;
+    height: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+div.button button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+div.button button:hover::after {
+    opacity: 1;
+    /* Adesso l'effetto sarà visibile */
+}
+
+.buttonAcc button {
+    background-color: rgb(34, 111, 228);
+    color: white;
+}
+
+.buttonPass button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
